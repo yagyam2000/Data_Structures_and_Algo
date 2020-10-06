@@ -1,0 +1,50 @@
+#include<stdio.h>
+int main()
+{
+	long long int t,n;
+	scanf("%lld",&t);
+	while(t--)
+	{
+		scanf("%lld",&n);
+		long long int a[n],b[n],i,sum=0,sum2=0;
+		for(i=0;i<n;i++)
+		{
+			scanf("%lld",&a[i]);
+		}
+		for(i=0;i<n;i++)
+		{
+			scanf("%lld",&b[i]);
+		}
+		for(i=0;i<n;i++)
+		{
+			if(i%2==0)
+			{
+				sum+=a[i];
+			}
+			else
+			{
+				sum+=b[i];
+			}
+		}
+		for(i=0;i<n;i++)
+		{
+			if(i%2==0)
+			{
+				sum2+=b[i];
+			}
+			else
+			{
+				sum2+=a[i];
+			}
+		}
+		if(sum>sum2)
+		{
+			printf("%lld\n",sum2);
+		}
+		else
+		{
+			printf("%lld\n",sum);
+		}
+	}
+	return 0;
+}
